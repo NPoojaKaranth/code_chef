@@ -1,0 +1,21 @@
+'''
+  You are given an array representing video frames.
+
+You may remove a frame if its value is equal to at least one of its adjacent frames.
+
+Find the minimum number of frames remaining after performing the operation any number of times.
+    '''
+    
+t = int(input())
+
+for _ in range(t):
+    n = int(input())
+    a = list(map(int, input().split()))
+
+    count = 1
+
+    for i in range(1, n):
+        if a[i] != a[i - 1]:
+            count += 1
+
+    print(count)
