@@ -1,0 +1,16 @@
+t=int(input())
+for _ in range(t):
+    n=int(input())
+    a=list(map(int,input().split()))
+    Flag='YES'
+    for i in range(1,n):
+        if a[i]<a[i-1]:
+            Flag='NO'
+            break
+    print(Flag)
+'''
+Given the difficulty ratings of problems solved in order, determine whether the sequence is non-decreasing.
+
+Print "Yes" if the sequence is non-decreasing.
+Print "No" otherwise.
+'''
